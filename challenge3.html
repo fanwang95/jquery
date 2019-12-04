@@ -74,25 +74,26 @@
   <input type="submit" value="Let us know">
 </form>
 <script>
-		$("#ch3form").submit(function() {
-
-				var x = $('input[name="fruit"]');
-
-				for (let i = 0; i < x.length;i++){
-						if (x[i].checked)
-								return true;
-				}
-				alert("You must pick from both sets!")
-				return false;
-
-				var y = $('input[name="standing"]');
-				for (let i = 0; i < y.length;i++){
-						if (y[i].checked)
-								return true;
-				}
-				alert("You must pick from both sets!")
-				return false;
-			})
+		$(document).ready(function(){
+	$("#ch3form").submit(function(){
+		var fruit = $('input[name="fruit"]');
+		for (let i=0; i< fruit.length;i++){
+			if (fruit[i].checked)
+				return true;
+		}
+		alert("You must pick a fruit!");
+		return false;
+	})
+	$("#ch3form").submit(function(){
+		var standing = $('input[name="standing"]');
+		for (let i=0; i<standing.length;i++){
+			if (standing[i].checked)
+				return true;
+		}
+		alert("You must pick a standing!");
+		return false;
+	})
+})
 </script>
 </body>
 </html>
