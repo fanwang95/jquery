@@ -49,9 +49,11 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
 				$("#useBilling").change(function() {
 					x = $("#billing").val();
 					if (this.checked){
+						console.log("selected");
 						$("#home").val(x);
 						$("#home").prop("disabled",true);}
 					else {
+						console.log("Not Selected");
 						$("#home").val("");
 						$("#home").prop("disabled",false);}
 
